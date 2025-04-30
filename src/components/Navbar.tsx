@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import Logo from './Logo';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold font-display text-gradient">lynq.bio</span>
+            <Logo size={isMobile ? "sm" : "md"} />
           </a>
 
           {/* Desktop Navigation */}

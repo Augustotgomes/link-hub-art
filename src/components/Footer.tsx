@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="text-xl font-bold font-display text-gradient">lynq.bio</span>
+            <Logo size="sm" />
             <p className="text-sm text-white/60 mt-2">
               Transformando links em experiências desde 2023
             </p>
