@@ -2,16 +2,18 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
-    <nav className="fixed w-full z-50 py-4">
+    <nav className="fixed w-full z-50 py-4 backdrop-blur-sm bg-background/80">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold font-display text-gradient">LinkHub</span>
+            <span className="text-2xl font-bold font-display text-gradient">lynq.bio</span>
           </a>
 
           {/* Desktop Navigation */}

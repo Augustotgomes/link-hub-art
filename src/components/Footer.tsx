@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="text-xl font-bold font-display text-gradient">LinkHub</span>
+            <span className="text-xl font-bold font-display text-gradient">lynq.bio</span>
             <p className="text-sm text-white/60 mt-2">
               Transformando links em experiências desde 2023
             </p>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           
           <div className="mt-6 md:mt-0">
             <p className="text-sm text-white/60">
-              © {new Date().getFullYear()} LinkHub. Todos os direitos reservados.
+              © {new Date().getFullYear()} lynq.bio. Todos os direitos reservados.
             </p>
           </div>
         </div>
