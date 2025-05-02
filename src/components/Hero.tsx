@@ -1,3 +1,4 @@
+
 // biome-ignore lint/style/useImportType: <explanation>
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -60,7 +61,7 @@ const Hero: React.FC = () => {
             <div className="glass-card rounded-2xl p-1 shadow-xl animate-float">
               <div className="aspect-[9/16] rounded-xl overflow-hidden">
                 <img
-                  src="BOKAsp BIO.png"
+                  src="https://lynq.bio/bokasp"
                   alt="Link hub preview"
                   className="w-full h-full object-cover"
                 />
