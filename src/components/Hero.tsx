@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             <div className="glass-card rounded-2xl p-1 shadow-xl animate-float">
               <div className="aspect-[9/16] rounded-xl overflow-hidden">
                 <img
-                  src="BOKAsp BIO.png"
+                  src="/lovable-uploads/6a5697f0-e4f8-498b-801a-a0137efa28a5.png"
                   alt="Link hub preview"
                   className="w-full h-full object-cover"
                 />
