@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 p-4 glass-card animate-fade-in">
+          <div className="md:hidden absolute top-16 left-0 right-0 p-4 bg-background shadow-lg animate-fade-in">
             <div className="flex flex-col space-y-4">
               <a 
                 href="#features" 
