@@ -19,15 +19,7 @@ const Features: React.FC = () => {
     {
       title: "Totalmente responsivo",
       description: "Performance perfeita em dispositivos móveis, tablets e desktops."
-    },
-    {
-      title: "Análise de cliques",
-      description: "Monitore o desempenho dos seus links com métricas detalhadas e insights."
-    },
-    {
-      title: "Domínio personalizado",
-      description: "Use seu próprio domínio para uma presença online mais profissional."
-    }
+    }, 
   ];
 
   return (
