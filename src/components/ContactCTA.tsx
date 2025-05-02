@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -18,9 +17,13 @@ const ContactCTA: React.FC = () => {
             <CardContent className="p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display">Pronto para criar seu LinkHub personalizado?</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 font-display">
+                    Pronto para criar seu LynqBio personalizado?
+                  </h2>
                   <p className="text-white/70 mb-6">
-                    Entre em contato e vamos discutir como podemos transformar seus links em uma experiência impressionante para seus seguidores.
+                    Entre em contato e vamos discutir como podemos transformar
+                    seus links em uma experiência impressionante para seus
+                    seguidores.
                   </p>
                   <div className="flex flex-col space-y-4">
                     <div className="flex items-center space-x-4">
@@ -39,35 +42,37 @@ const ContactCTA: React.FC = () => {
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                         <span className="text-sm font-bold">3</span>
                       </div>
-                      <p>Veja seu LinkHub ganhar vida</p>
+                      <p>Veja seu LynqBio ganhar vida</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                  <h3 className="text-xl font-bold mb-4 font-display">Solicite um orçamento</h3>
+                  <h3 className="text-xl font-bold mb-4 font-display">
+                    Solicite um orçamento
+                  </h3>
                   <form className="space-y-4">
                     <div>
-                      <Input 
-                        placeholder="Seu nome" 
+                      <Input
+                        placeholder="Seu nome"
                         className="bg-white/10 border-white/20 focus:border-purple-500"
                       />
                     </div>
                     <div>
-                      <Input 
-                        placeholder="Email" 
+                      <Input
+                        placeholder="Email"
                         className="bg-white/10 border-white/20 focus:border-purple-500"
                       />
                     </div>
                     <div>
-                      <Input 
-                        placeholder="Whatsapp" 
+                      <Input
+                        placeholder="Whatsapp"
                         className="bg-white/10 border-white/20 focus:border-purple-500"
                       />
                     </div>
                     <div>
-                      <textarea 
-                        placeholder="Conte-nos sobre seu projeto" 
+                      <textarea
+                        placeholder="Conte-nos sobre seu projeto"
                         className="w-full rounded-md bg-white/10 border-white/20 focus:border-purple-500 p-3 min-h-[100px]"
                       ></textarea>
                     </div>
