@@ -5,7 +5,16 @@ import { Link } from 'react-router-dom';
 import { useClickAnalytics } from '@/hooks/use-click-analytics';
 
 const Footer: React.FC = () => {
-  const { trackClick } = useClickAnalytics();
+  const { trackClick, trackLinkAccess } = useClickAnalytics();
+
+  // Handle external link clicks
+  const handleExternalLinkClick = (url: string, text: string) => {
+    trackLinkAccess({
+      elementText: text,
+      url: url,
+      section: 'footer'
+    });
+  };
 
   return (
     <footer className="py-12 border-t border-white/10">
@@ -55,11 +64,14 @@ const Footer: React.FC = () => {
             <Link 
               to="/analytics" 
               className="text-sm text-white/60 hover:text-white transition-colors"
-              onClick={(e) => trackClick(e, {
-                elementType: 'link',
-                section: 'footer',
-                elementText: 'Analytics'
-              })}
+              onClick={(e) => {
+                trackClick(e, {
+                  elementType: 'link',
+                  section: 'footer',
+                  elementText: 'Analytics'
+                });
+                // We don't need to call trackLinkAccess here because useEffect will track the navigation
+              }}
             >
               Analytics
             </Link>

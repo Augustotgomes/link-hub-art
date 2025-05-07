@@ -9,7 +9,16 @@ import { useClickAnalytics } from '@/hooks/use-click-analytics';
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-  const { trackClick } = useClickAnalytics();
+  const { trackClick, trackLinkAccess } = useClickAnalytics();
+
+  // Handle external link click
+  const handleExternalLinkClick = (url: string, text: string) => {
+    trackLinkAccess({
+      elementText: text,
+      url: url,
+      section: 'navbar'
+    });
+  };
 
   return (
     <nav className="fixed w-full z-50 py-4 backdrop-blur-sm bg-background/80">
@@ -65,11 +74,14 @@ const Navbar: React.FC = () => {
             <Button 
               size="sm" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-              onClick={(e) => trackClick(e, { 
-                elementType: 'button', 
-                section: 'navbar', 
-                elementText: 'Começar agora' 
-              })}
+              onClick={(e) => {
+                trackClick(e, { 
+                  elementType: 'button', 
+                  section: 'navbar', 
+                  elementText: 'Começar agora' 
+                });
+                handleExternalLinkClick('https://api.whatsapp.com/send/?phone=5511989342578', 'Começar agora');
+              }}
             >
               Começar agora
             </Button>
