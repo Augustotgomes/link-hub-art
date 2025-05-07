@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { getClickAnalytics, clearClickAnalytics, AnalyticsEvent } from '@/hooks/use-click-analytics';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
@@ -207,7 +206,7 @@ const AnalyticsDashboard: React.FC = () => {
                           <td className="p-2">{new Date(event.timestamp).toLocaleTimeString()}</td>
                           <td className="p-2 capitalize">{event.type.replace('_', ' ')}</td>
                           <td className="p-2">{event.elementType || '-'}</td>
-                          <td className="p-2">{event.elementText || (event.type === 'link_access' ? event.url : '-')}</td>
+                          <td className="p-2">{event.elementText || (event.type === 'link_access' && event.url) || '-'}</td>
                           <td className="p-2">{event.section}</td>
                           <td className="p-2">{event.path || '-'}</td>
                         </tr>

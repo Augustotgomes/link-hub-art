@@ -9,6 +9,7 @@ export type AnalyticsEvent = {
   elementText?: string;
   section: string;
   path?: string;
+  url?: string; // Adicionando a propriedade url que estava faltando
   timestamp: string;
 };
 
