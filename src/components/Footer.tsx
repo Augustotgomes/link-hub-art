@@ -1,8 +1,12 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
+import { useClickAnalytics } from '@/hooks/use-click-analytics';
 
 const Footer: React.FC = () => {
+  const { trackClick } = useClickAnalytics();
+
   return (
     <footer className="py-12 border-t border-white/10">
       <div className="container mx-auto px-4">
@@ -15,15 +19,50 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-            <a href="#features" className="text-sm text-white/60 hover:text-white transition-colors">
+            <a 
+              href="#features" 
+              className="text-sm text-white/60 hover:text-white transition-colors"
+              onClick={(e) => trackClick(e, {
+                elementType: 'link',
+                section: 'footer',
+                elementText: 'Recursos'
+              })}
+            >
               Recursos
             </a>
-            <a href="#portfolio" className="text-sm text-white/60 hover:text-white transition-colors">
+            <a 
+              href="#portfolio" 
+              className="text-sm text-white/60 hover:text-white transition-colors"
+              onClick={(e) => trackClick(e, {
+                elementType: 'link',
+                section: 'footer',
+                elementText: 'Exemplos'
+              })}
+            >
               Exemplos
             </a>
-            <a href="#contact" className="text-sm text-white/60 hover:text-white transition-colors">
+            <a 
+              href="#contact" 
+              className="text-sm text-white/60 hover:text-white transition-colors"
+              onClick={(e) => trackClick(e, {
+                elementType: 'link',
+                section: 'footer',
+                elementText: 'Contato'
+              })}
+            >
               Contato
             </a>
+            <Link 
+              to="/analytics" 
+              className="text-sm text-white/60 hover:text-white transition-colors"
+              onClick={(e) => trackClick(e, {
+                elementType: 'link',
+                section: 'footer',
+                elementText: 'Analytics'
+              })}
+            >
+              Analytics
+            </Link>
           </div>
           
           <div className="mt-6 md:mt-0">

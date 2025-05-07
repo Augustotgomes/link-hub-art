@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { useClickAnalytics } from '@/hooks/use-click-analytics';
 
 const Features: React.FC = () => {
+  const { trackClick } = useClickAnalytics();
+  
   const features = [
     {
       title: "Design personalizado",
@@ -34,7 +37,16 @@ const Features: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="glass-card border-0 overflow-hidden group hover:shadow-purple-500/20 transition-all duration-300">
+            <Card 
+              key={index} 
+              className="glass-card border-0 overflow-hidden group hover:shadow-purple-500/20 transition-all duration-300"
+              onClick={(e) => trackClick(e, {
+                elementType: 'card',
+                section: 'features',
+                elementId: `feature-${index}`,
+                elementText: feature.title
+              })}
+            >
               <CardContent className="p-6">
                 <div className="h-full flex flex-col">
                   <div className="mb-4 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
