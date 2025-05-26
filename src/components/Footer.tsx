@@ -62,6 +62,19 @@ const Footer: React.FC = () => {
               Contato
             </a>
             <Link 
+              to="/bio/bokasp" 
+              className="text-sm text-white/60 hover:text-white transition-colors"
+              onClick={(e) => {
+                trackClick(e, {
+                  elementType: 'link',
+                  section: 'footer',
+                  elementText: 'BOKAsp BIO'
+                });
+              }}
+            >
+              BOKAsp BIO
+            </Link>
+            <Link 
               to="/analytics" 
               className="text-sm text-white/60 hover:text-white transition-colors"
               onClick={(e) => {
@@ -70,7 +83,6 @@ const Footer: React.FC = () => {
                   section: 'footer',
                   elementText: 'Analytics'
                 });
-                // We don't need to call trackLinkAccess here because useEffect will track the navigation
               }}
             >
               Analytics
