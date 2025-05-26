@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               Contato
             </a>
             <Link 
-              to="/bio/bokasp" 
+              to="/bokasp" 
               className="text-sm text-white/60 hover:text-white transition-colors"
               onClick={(e) => {
                 trackClick(e, {
