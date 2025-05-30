@@ -1,3 +1,4 @@
+
 import type React from "react";
 import { useClickAnalytics } from "@/hooks/use-click-analytics";
 
@@ -49,7 +50,7 @@ const Bio: React.FC<BioProps> = ({ title, canvaUrl, canvaDesignId }) => {
                 padding: 0,
                 margin: 0,
               }}
-              src={`https://www.canva.com/design/${canvaDesignId}/gR6pVws4Gn3_2w4IBHe-dA/view?embed`}
+              src={`https://www.canva.com/design/${canvaDesignId}/view?embed`}
               allowFullScreen
               allow="fullscreen"
             />
