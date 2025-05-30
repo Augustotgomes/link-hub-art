@@ -4,9 +4,9 @@ import Bio from "@/components/Bio";
 const BokaspBio: React.FC = () => {
   return (
     <Bio
-      canvaUrl="https://www.canva.com/design/DAGlCVq8WVU/5LTXNUVMa5ewD-TTyQo7CA/view?utm_content=DAGlCVq8WVU&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-      canvaDesignId="DAGlCVq8WVU"
-      title={"SraMaravilha"}
+      canvaUrl="https://www.canva.com/design/DAGl70zEAdE/gR6pVws4Gn3_2w4IBHe-dA/view?utm_content=DAGl70zEAdE&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+      canvaDesignId="DAGl70zEAdE"
+      title={"BOKAsp"}
     />
   );
 };
